@@ -1,0 +1,94 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browser Game — Lucky</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <a href="../../index.html" class="logo">LUCKY</a>
+
+    <a href="../../index.html" class="back">
+        ← BACK TO PORTFOLIO
+    </a>
+</header>
+
+<main>
+
+    <div class="title">
+        <p>GAME EXPERIMENT / 003</p>
+        <h1>DODGE<span>.</span></h1>
+    </div>
+
+    <div class="game-box">
+
+        <div class="game-info">
+            <span>
+                SCORE:
+                <strong id="score">0</strong>
+            </span>
+
+            <span>
+                HIGH SCORE:
+                <strong id="highScore">0</strong>
+            </span>
+        </div>
+
+        <canvas id="gameCanvas"></canvas>
+
+        <div class="game-message" id="gameMessage">
+
+            <h2>DODGE</h2>
+
+            <p>
+                Use ← → or A / D to move
+            </p>
+
+            <button id="startButton">
+                START GAME
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- Desktop controls -->
+    <p class="controls">
+        ← A &nbsp;&nbsp; MOVE &nbsp;&nbsp; D →
+    </p>
+
+    <!-- Mobile controls -->
+    <div class="mobile-controls">
+
+        <button id="leftButton">
+            ←
+        </button>
+
+        <button id="rightButton">
+            →
+        </button>
+
+    </div>
+
+</main>
+
+<footer>
+    <span>
+        LUCKY © <span id="year"></span>
+    </span>
+
+    <span>
+        JAVASCRIPT / CANVAS / GAME
+    </span>
+</footer>
+
+<script src="game.js"></script>
+
+</body>
+</html>
+```

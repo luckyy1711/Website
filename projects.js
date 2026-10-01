@@ -1,58 +1,26 @@
 const projects = [
     {
         title: "Demo App",
-
-        description:
-            "A standalone example project showing how tools and games can live inside the portfolio.",
-
-        tags: [
-            "HTML",
-            "CSS",
-            "JavaScript"
-        ],
-
-        image:
-            "./assets/images/project-demo.webp",
-
-        link:
-            "./projects/demo-app/index.html"
+        description: "A standalone web experiment built to test ideas, interfaces and interactions.",
+        tags: ["HTML", "CSS", "JavaScript"],
+        image: "",
+        link: "./projects/demo-app/index.html",
+        type: "demo"
     },
-
     {
         title: "Spotify Utility",
-
-        description:
-            "A placeholder for future music and playlist utilities built for the browser.",
-
-        tags: [
-            "JavaScript",
-            "API",
-            "Music"
-        ],
-
-        image:
-            "./assets/images/spotify-tool.webp",
-
-        link:
-            "./projects/spotify-tool/index.html"
+        description: "A lightweight music utility for experimenting with playlists and audio interfaces.",
+        tags: ["JavaScript", "Music", "UI"],
+        image: "",
+        link: "./projects/spotify-tool/index.html",
+        type: "music"
     },
-
     {
         title: "Browser Game",
-
-        description:
-            "An experimental lightweight browser game running entirely with web technologies.",
-
-        tags: [
-            "JavaScript",
-            "Game",
-            "Canvas"
-        ],
-
-        image:
-            "./assets/images/game.webp",
-
-        link:
-            "./projects/browser-game/index.html"
+        description: "A lightweight browser game built entirely with JavaScript and Canvas.",
+        tags: ["JavaScript", "Game", "Canvas"],
+        image: "",
+        link: "./projects/browser-game/index.html",
+        type: "game"
     }
 ];

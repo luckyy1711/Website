@@ -16,99 +16,79 @@ function renderProjects() {
     projectGrid.innerHTML = "";
 
 
-    projects.forEach((project, index) => {
+    projects.forEach((project) => {
+    const card = document.createElement("a");
 
-        const projectCard =
-            document.createElement("a");
+    card.className = "project-card reveal";
+    card.href = project.link;
 
+    card.innerHTML = `
+        <div class="project-visual project-${project.type}">
+            ${
+                project.type === "demo"
+                    ? `
+                        <div class="visual-window">
+                            <div class="window-top">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <div class="visual-lines">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                            <div class="visual-button">RUN</div>
+                        </div>
+                    `
+                    : project.type === "music"
+                    ? `
+                        <div class="music-ui">
+                            <div class="album"></div>
+                            <div class="music-info">
+                                <strong>NOW PLAYING</strong>
+                                <span>Music Utility</span>
+                            </div>
+                            <div class="wave">
+                                <i></i><i></i><i></i><i></i><i></i>
+                                <i></i><i></i><i></i><i></i><i></i>
+                                <i></i><i></i><i></i>
+                            </div>
+                            <div class="music-controls">
+                                <span>◀</span>
+                                <span class="play">▶</span>
+                                <span>▶</span>
+                            </div>
+                        </div>
+                    `
+                    : `
+                        <div class="game-ui">
+                            <div class="game-score">SCORE: 0420</div>
+                            <div class="game-player"></div>
+                            <div class="game-enemy enemy-one"></div>
+                            <div class="game-enemy enemy-two"></div>
+                            <div class="game-ground"></div>
+                        </div>
+                    `
+            }
+        </div>
 
-        projectCard.className =
-            "project-card reveal";
-
-
-        projectCard.href =
-            project.link;
-
-
-        /*
-        External links open in another tab.
-        Internal portfolio projects remain
-        in the same tab.
-        */
-
-        if (
-            project.link.startsWith("http://") ||
-            project.link.startsWith("https://")
-        ) {
-            projectCard.target = "_blank";
-
-            projectCard.rel =
-                "noopener noreferrer";
-        }
-
-
-        const formattedIndex =
-            String(index + 1).padStart(2, "0");
-
-
-        const tags =
-            project.tags
-                .map(
-                    tag =>
-                        `<span class="tag">${escapeHTML(tag)}</span>`
-                )
-                .join("");
-
-
-        projectCard.innerHTML = `
-
-            <div class="project-image">
-
-                <span class="project-index">
-                    ${formattedIndex}
-                </span>
-
-                <img
-                    src="${escapeAttribute(project.image)}"
-                    alt="${escapeAttribute(project.title)} preview"
-                    loading="lazy"
-                >
-
+        <div class="project-content">
+            <div class="project-top">
+                <h3>${project.title}</h3>
+                <span class="project-arrow">↗</span>
             </div>
 
+            <p>${project.description}</p>
 
-            <div class="project-content">
-
-                <div class="project-topline">
-
-                    <h3>
-                        ${escapeHTML(project.title)}
-                    </h3>
-
-                    <span class="project-arrow">
-                        ↗
-                    </span>
-
-                </div>
-
-
-                <p class="project-description">
-                    ${escapeHTML(project.description)}
-                </p>
-
-
-                <div class="tags">
-                    ${tags}
-                </div>
-
+            <div class="project-tags">
+                ${project.tags.map(tag => `<span>${tag}</span>`).join("")}
             </div>
+        </div>
+    `;
 
-        `;
-
-
-        projectGrid.appendChild(projectCard);
-
-    });
+    projectsGrid.appendChild(card);
+});
 
 
     if (projectCount) {

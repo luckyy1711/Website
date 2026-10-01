@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Spotify Utility — Lucky</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="background"></div>
+
+    <header>
+        <a href="../../index.html" class="logo">LUCKY</a>
+
+        <a href="../../index.html" class="back">
+            ← BACK TO PORTFOLIO
+        </a>
+    </header>
+
+    <main>
+
+        <section class="hero">
+            <p class="eyebrow">MUSIC EXPERIMENT / 002</p>
+
+            <h1>
+                SPOTIFY<br>
+                <span>UTILITY.</span>
+            </h1>
+
+            <p class="description">
+                A lightweight music interface experiment focused on
+                playlists, playback controls and clean UI.
+            </p>
+        </section>
+
+
+        <section class="player">
+
+            <div class="album">
+                <div class="disc"></div>
+            </div>
+
+            <div class="track-info">
+                <span>NOW PLAYING</span>
+                <h2>Midnight Drive</h2>
+                <p>Lucky's Music Collection</p>
+            </div>
+
+            <div class="progress">
+                <div class="progress-bar"></div>
+            </div>
+
+            <div class="time">
+                <span>1:42</span>
+                <span>3:47</span>
+            </div>
+
+            <div class="controls">
+
+                <button>↶</button>
+
+                <button id="playButton" class="play">
+                    ▶
+                </button>
+
+                <button>↷</button>
+
+            </div>
+
+            <div class="volume">
+
+                <span>VOL</span>
+
+                <input
+                    id="volume"
+                    type="range"
+                    min="0"
+                    max="100"
+                    value="70"
+                >
+
+                <span id="volumeValue">70%</span>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <span>LUCKY © <span id="year"></span></span>
+        <span>JAVASCRIPT / MUSIC / UI</span>
+    </footer>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
