@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Personal developer portfolio featuring web tools, experiments, utilities and browser games."
+    >
+
+    <meta name="theme-color" content="#08090c">
+
+    <title>Lucky — Developer & Creator & Artist & Chef</title>
+
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+
+    <!-- Ambient background -->
+    <div class="background-grid" aria-hidden="true"></div>
+    <div class="background-glow glow-one" aria-hidden="true"></div>
+    <div class="background-glow glow-two" aria-hidden="true"></div>
+
+    <!-- ==================== HEADER ==================== -->
+
+    <header class="site-header">
+        <a href="#home" class="logo">
+            <span class="logo-mark"></span>
+            LUCKY
+        </a>
+
+        <button
+            class="menu-button"
+            id="menuButton"
+            aria-label="Open navigation"
+            aria-expanded="false"
+        >
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav class="nav" id="navigation">
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#misc">Misc</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+
+    <main>
+
+        <!-- ==================== HERO ==================== -->
+
+        <section class="hero section" id="home">
+
+            <div class="hero-status reveal">
+                <span class="status-dot"></span>
+                Available for experiments
+            </div>
+
+            <div class="hero-content">
+
+                <p class="eyebrow reveal">
+                    Developer / Experimenter / Artist / Chef
+                </p>
+
+                <h1 class="hero-title reveal">
+                    I BUILD
+                    <span>THINGS</span>
+                    FOR THE WEB.
+                </h1>
+
+                <div class="hero-bottom reveal">
+
+                    <p class="hero-description">
+                        Personal projects, web experiments,
+                        utilities, games built with code,
+                        my art and recipies.
+                    </p>
+
+                    <a href="#projects" class="primary-button">
+                        Explore projects
+
+                        <span aria-hidden="true">↘</span>
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="hero-meta reveal">
+
+                <div>
+                    <span class="meta-label">Focus</span>
+                    <span>Web / Tools / Games / Art</span>
+                </div>
+
+                <div>
+                    <span class="meta-label">Stack</span>
+                    <span>HTML / CSS / JS / Python /Chat-GPT / Gemini </span>
+                </div>
+
+                <div>
+                    <span class="meta-label">Location</span>
+                    <span>Internet</span>
+                </div>
+
+            </div>
+
+            <a href="#about" class="scroll-indicator">
+                <span>SCROLL</span>
+                <div class="scroll-line"></div>
+            </a>
+
+        </section>
+
+
+        <!-- ==================== ABOUT ==================== -->
+
+        <section class="about section" id="about">
+
+            <div class="section-heading reveal">
+                <span class="section-number">01</span>
+
+                <div>
+                    <p class="section-label">About</p>
+                    <h2>
+                        Code meets
+                        <span>curiosity.</span>
+                    </h2>
+                </div>
+            </div>
+
+
+            <div class="about-grid">
+
+                <div class="about-copy reveal">
+
+                    <p class="large-copy">
+                        I'm a developer who likes creating useful,
+                        strange and interesting things for the web and me.
+                    </p>
+
+                    <p>
+                        This site is my digital playground — part
+                        portfolio, part project archive and part
+                        laboratory for new ideas.
+                    </p>
+
+                    <p>
+                        I experiment with lightweight applications,
+                        browser tools, interfaces, automation and
+                        interactive experiences.
+                    </p>
+
+                </div>
+
+
+                <div class="skills-panel reveal">
+
+                    <div class="skills-header">
+                        <span>TECH STACK</span>
+                        <span>2026</span>
+                    </div>
+
+                    <div class="skill-list">
+
+                        <div class="skill">
+                            <span>HTML</span>
+                            <span>Semantic layouts</span>
+                        </div>
+
+                        <div class="skill">
+                            <span>CSS</span>
+                            <span>UI / Animation</span>
+                        </div>
+
+                        <div class="skill">
+                            <span>JavaScript</span>
+                            <span>Interactive apps</span>
+                        </div>
+
+                        <div class="skill">
+                            <span>Python</span>
+                            <span>Tools / Automation</span>
+                        </div>
+
+                        <div class="skill">
+                            <span>Git</span>
+                            <span>Version control</span>
+                        </div>
+						
+						<div class="skill">
+                            <span>Chat-Gpt</span>
+                            <span>Scripts / Codes</span>
+                        
+                       </div>
+                       						<div class="skill">
+                            <span>Gemini</span>
+                            <span>Prompts</span>
+                        
+                       </div>
+                    
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================== PROJECTS ==================== -->
+
+        <section class="projects section" id="projects">
+
+            <div class="section-heading reveal">
+
+                <span class="section-number">02</span>
+
+                <div>
+                    <p class="section-label">Selected work</p>
+
+                    <h2>
+                        Things I've
+                        <span>built.</span>
+                    </h2>
+                </div>
+
+            </div>
+
+
+            <div class="project-toolbar reveal">
+
+                <p>
+                    Tools, experiments, websites and games.
+                </p>
+
+                <div class="project-count">
+                    <span id="projectCount">00</span>
+                    PROJECTS
+                </div>
+
+            </div>
+
+
+            <!-- JavaScript inserts project cards here -->
+
+            <div
+                class="projects-grid"
+                id="projectsGrid"
+            ></div>
+
+        </section>
+
+
+        <!-- ==================== MISC ==================== -->
+
+        <section class="misc section" id="misc">
+
+            <div class="section-heading reveal">
+
+                <span class="section-number">03</span>
+
+                <div>
+                    <p class="section-label">Other</p>
+
+                    <h2>
+                        More from
+                        <span>me.</span>
+                    </h2>
+                </div>
+
+            </div>
+
+
+            <div class="misc-grid">
+
+                <a
+                    href="#"
+                    class="misc-card reveal"
+                >
+                    <span class="misc-number">01</span>
+
+                    <div>
+                        <h3>GitHub</h3>
+                        <p>Source code and experiments</p>
+                    </div>
+
+                    <span class="arrow">↗</span>
+                </a>
+
+
+                <a
+                    href="#"
+                    class="misc-card reveal"
+                >
+                    <span class="misc-number">02</span>
+
+                    <div>
+                        <h3>Spotify</h3>
+                        <p>Playlists I'm listening to</p>
+                    </div>
+
+                    <span class="arrow">↗</span>
+                </a>
+
+
+                <a
+                    href="#projects"
+                    class="misc-card reveal"
+                >
+                    <span class="misc-number">03</span>
+
+                    <div>
+                        <h3>Experiments</h3>
+                        <p>Random things built for fun</p>
+                    </div>
+
+                    <span class="arrow">↗</span>
+                </a>
+
+            <a
+                    href="https://in.pinterest.com/luckyy_1711/"
+                    class="misc-card reveal"
+                    target="_blank"
+                    rel="noopenner norefferer"
+                >
+                    <span class="misc-number">04</span>
+
+                    <div>
+                        <h3>My Art</h3>
+                        <p>Illustrations, Drawings & artwork</p>
+                    </div>
+
+                    <span class="arrow">↗</span>
+                </a>
+                
+                <a
+                    href="#Projects"
+                    class="misc-card reveal"
+                >
+                    <span class="misc-number">05</span>
+
+                    <div>
+                        <h3>Recipies</h3>
+                        <p>All my food recipies</p>
+                    </div>
+
+                    <span class="arrow">↗</span>
+                </a>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================== CONTACT ==================== -->
+
+        <section class="contact section" id="contact">
+
+            <div class="contact-inner">
+
+                <p class="section-label reveal">
+                    04 / Contact
+                </p>
+
+                <h2 class="contact-title reveal">
+                    HAVE AN IDEA?
+                    <span>LET'S TALK.</span>
+                </h2>
+
+                <div class="contact-actions reveal">
+
+                    <a
+                        href="mailto:you@example.com"
+                        class="primary-button large-button"
+                    >
+                        sadhraj60@gmail.com
+                        <span>↗</span>
+                    </a>
+
+                    <button
+                        class="secondary-button"
+                        id="copyEmail"
+                        data-email="you@example.com"
+                    >
+                        Copy email
+                    </button>
+
+                </div>
+
+
+                <div
+                    class="copy-message"
+                    id="copyMessage"
+                    aria-live="polite"
+                ></div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ==================== FOOTER ==================== -->
+
+    <footer class="footer">
+
+        <a href="#home" class="footer-logo">
+            LUCKY.
+        </a>
+
+        <p>
+            Designed & built with Chat GPT, HTML, CSS and JavaScript.
+        </p>
+
+        <p>
+            © <span id="currentYear"></span>
+        </p>
+
+    </footer>
+
+
+    <!-- Project data FIRST -->
+    <script src="./projects.js"></script>
+
+    <!-- Main functionality SECOND -->
+    <script src="./app.js"></script>
+
+</body>
+</html>
