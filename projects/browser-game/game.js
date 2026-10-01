@@ -85,7 +85,7 @@ function createEnemy() {
         y: -size,
         width: size,
         height: size,
-        speed: 3 + Math.random() * 3 + score / 150
+        speed: 7 + Math.random() * 6 + score / 35
     });
 }
 
@@ -109,7 +109,7 @@ function update(delta) {
 
     enemyTimer += delta;
 
-    const spawnDelay = Math.max(300, 900 - score * 2);
+    const spawnDelay = Math.max(120, 650 - score * 6);
 
     if (enemyTimer > spawnDelay) {
         createEnemy();

@@ -1479,3 +1479,80 @@ img {
     background: var(--accent);
     box-shadow: 0 0 15px rgba(0,170,255,.5);
 }
+
+/* =================================
+   SCROLL DEPTH EFFECT
+================================= */
+
+html {
+    background: #08090c;
+}
+
+body {
+    overflow-x: hidden;
+    isolation: isolate;
+}
+
+/* Extra stripe layer that reacts to scrolling */
+
+.scroll-stripes {
+    position: fixed;
+    inset: -20%;
+
+    pointer-events: none;
+
+    z-index: 0;
+
+    opacity: calc(0.08 + var(--scroll-glow, 0) * 0.22);
+
+    background:
+        repeating-linear-gradient(
+            125deg,
+            rgba(255, 255, 255, 0.13) 0px,
+            rgba(255, 255, 255, 0.13) 1px,
+            transparent 1px,
+            transparent 42px
+        );
+
+    transform:
+        perspective(900px)
+        rotateX(58deg)
+        scale(calc(1 + var(--scroll-push, 0) * 0.22))
+        translateY(calc(var(--scroll-push, 0) * -12%));
+
+    filter:
+        blur(calc(var(--scroll-glow, 0) * 1.5px))
+        drop-shadow(
+            0 0
+            calc(var(--scroll-glow, 0) * 10px)
+            rgba(255, 255, 255, 0.35)
+        );
+
+    transition:
+        opacity 180ms ease,
+        filter 180ms ease;
+}
+
+/* Keep the actual site above the effect */
+
+body > * {
+    position: relative;
+    z-index: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .scroll-stripes {
+        opacity: 0.08;
+        transform:
+            perspective(900px)
+            rotateX(58deg)
+            scale(1);
+        filter: none;
+    }
+}
+
+@media (max-width: 700px) {
+    .scroll-stripes {
+        opacity: calc(0.06 + var(--scroll-glow, 0) * 0.12);
+    }
+}

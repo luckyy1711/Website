@@ -340,3 +340,48 @@ document.getElementById(
     "currentYear"
 ).textContent =
     new Date().getFullYear();
+
+/* =================================
+   SCROLL DEPTH EFFECT
+================================= */
+
+(() => {
+    const stripes = document.createElement("div");
+
+    stripes.className = "scroll-stripes";
+    document.body.appendChild(stripes);
+
+    let lastScroll = window.scrollY;
+    let velocity = 0;
+    let targetPush = 0;
+    let currentPush = 0;
+    let currentGlow = 0;
+
+    function updateScroll() {
+        const currentScroll = window.scrollY;
+        const movement = Math.abs(currentScroll - lastScroll);
+
+        velocity += (movement - velocity) * 0.18;
+
+        targetPush = Math.min(1, velocity / 28);
+
+        currentPush += (targetPush - currentPush) * 0.16;
+        currentGlow += (targetPush - currentGlow) * 0.16;
+
+        document.body.style.setProperty(
+            "--scroll-push",
+            currentPush.toFixed(3)
+        );
+
+        document.body.style.setProperty(
+            "--scroll-glow",
+            currentGlow.toFixed(3)
+        );
+
+        lastScroll = currentScroll;
+
+        requestAnimationFrame(updateScroll);
+    }
+
+    updateScroll();
+})();
